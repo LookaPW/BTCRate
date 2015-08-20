@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="489.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pw.looka.btcrate.ui.OptionsController">
+  <tabs>
+    <Tab text="General">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="489.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Fetch every X minutes:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                  <TextField fx:id="minuteDelayTextField" layoutX="14.0" layoutY="31.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="31.0" />
+                  <Label layoutX="14.0" layoutY="66.0" text="Currency:" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="66.0" />
+                  <ChoiceBox fx:id="currencyChoiceBox" layoutX="14.0" layoutY="83.0" prefWidth="150.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="83.0" />
+                  <CheckBox fx:id="displayNotificationCheckBox" layoutX="14.0" layoutY="121.0" mnemonicParsing="false" text="Display a notification on every rate fetch(still shows alerts)." AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="121.0" />
+                  <Button fx:id="forceFetchButton" layoutX="370.0" layoutY="10.0" mnemonicParsing="false" text="Force Fetch Now" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="10.0" />
+                  <Button fx:id="applySettingsButton" layoutX="382.0" layoutY="227.0" mnemonicParsing="false" text="Apply Settings" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Alerts">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="This section handles specific alerts other than the usual rate notification." />
+                  <Label layoutX="14.0" layoutY="31.0" text="Put in 0 if you do not want to be alerted about it." />
+                  <Label layoutX="14.0" layoutY="55.0" text="Alert me when:" />
+                  <Label layoutX="14.0" layoutY="79.0" text="BTC Ask Drops Below:" />
+                  <TextField fx:id="askDropsBelowTextField" layoutX="150.0" layoutY="75.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Label layoutX="14.0" layoutY="110.0" text="BTC Bid Drops Below:" />
+                  <TextField fx:id="bidDropsBelowTextField" layoutX="150.0" layoutY="106.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Label layoutX="14.0" layoutY="140.0" text="BTC 24AVG Drops Below:" />
+                  <TextField fx:id="dailyAverageDropsBelowTextField" layoutX="150.0" layoutY="136.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Button fx:id="applyAlertButton" layoutX="428.0" layoutY="230.0" mnemonicParsing="false" text="Apply" />
+                  <TextField fx:id="dailyAverageExceedsTextField" layoutX="150.0" layoutY="230.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Label layoutX="14.0" layoutY="234.0" text="BTC 24AVG Exceeds:" />
+                  <TextField fx:id="bidExceedsTextField" layoutX="150.0" layoutY="200.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Label layoutX="14.0" layoutY="204.0" text="BTC Bid Exceeds:" />
+                  <TextField fx:id="askExceedsTextField" layoutX="150.0" layoutY="169.0" prefHeight="25.0" prefWidth="43.0" />
+                  <Label layoutX="14.0" layoutY="173.0" text="BTC Ask Exceeds:" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="About">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea layoutX="80.0" layoutY="43.0" prefHeight="465.0" prefWidth="489.0" text="BTCRate is an application developed by Looka.&#10;&#10;This application will display the bitcoin rates every so often." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
